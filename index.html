@@ -31,31 +31,60 @@
 </div>
 
 <div class="container">
-  <form>
-    <section class="col-12">
-      <form>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Search term</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  <div class="row">
+    <div class="col-sm-12">
+      <br>
+      <!-- First card is for handling the search parameters -->
+      <div class="card">
+        <div class="card-header">
+          <strong>
+            <i class="fa fa-list-alt"></i> Search Parameters</strong>
         </div>
-        
-        <div class="input-group">
-          <input type="text" class="form-control" aria-label="Text input with dropdown button">
-          <div class="input-group-append">
-            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div role="separator" class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
-            </div>
-          </div>
-        
+        <div class="card-body">
 
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-    </section>
+          <!-- Here we create an HTML Form for handling the inputs-->
+          <form role="form">
+
+            <!-- Here we create the text box for capturing the search term-->
+            <div class="form-group">
+              <label for="search">Search Term:</label>
+              <input type="text" class="form-control" id="search-term">
+            </div>
+
+            <!-- Here we capture the number of records that the user wants to retrieve  -->
+            <div class="form-group">
+              <label for="pwd">Number of Records to Retrieve:</label>
+              <select id="article-count" class="custom-select" aria-labelledby="dropdownMenuButton">
+                <option selected value="1">1</option>
+                <!-- Setting the option for 5 as default -->
+                <option value="5" selected>5</option>
+                <option value="10">10</option>
+              </select>
+            </div>
+
+            <!-- Here we capture the Start Year Parameter-->
+            <div class="form-group">
+              <label for="start-year">Start Year (Optional):</label>
+              <input type="text" class="form-control" id="start-year">
+            </div>
+
+            <!-- Here we capture the End Year Parameter -->
+            <div class="form-group">
+              <label for="end-year">End Year (Optional):</label>
+              <input type="text" class="form-control" id="end-year">
+            </div>
+
+            <!-- Here we have our final submit button -->
+            <button type="submit" class="btn btn-default" id="run-search">
+              <i class="fa fa-search"></i> Search</button>
+            <button class="btn btn-default" id="clear-all">
+              <i class="fa fa-trash"></i> Clear Results</button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
     <!-- scripts -->
